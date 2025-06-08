@@ -1,0 +1,1 @@
+import{N as o}from"./NotpagViews-DKttdLL5.js";import{aA as t,au as r}from"./vendor-BgdpebUf.js";import"./index-BVIEF2k4.js";import"./naive-ui-AFUgf4pS.js";const i={__name:"AboutView",setup(a){return(e,p)=>(r(),t(o))}};export{i as default};

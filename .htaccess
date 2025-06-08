@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Agar fayl yoki papka mavjud bo'lmasa
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Asosiy index.html'ga yo'naltir
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# MIME type (ixtiyoriy, xavfsizlik va caching uchun)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|html|json)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>
